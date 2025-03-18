@@ -6,7 +6,7 @@ import featuredImg from "../../../assets/home/featured.jpg";
 
 const Featured = () => {
   return (
-    <div className="bg-fixed  text-white my-20 pt-8 featured-item">
+    <div className="bg-fixed text-white my-20 pt-8 featured-item">
       <SectionTitle
         subHeading={"Check it out"}
         heading={"From Our Menu"}
