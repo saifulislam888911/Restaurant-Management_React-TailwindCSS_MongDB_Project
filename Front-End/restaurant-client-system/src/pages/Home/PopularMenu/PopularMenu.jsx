@@ -1,24 +1,11 @@
+// Files : Components : src :
 import SectionTitle from "../../../components/SectionTitle/SectionTitle";
+// Files : Components : Shared :
 import MenuItem from "../../Shared/MenuItem/MenuItem";
+// Files : hooks :
 import useMenu from "../../../hooks/useMenu";
 
 const PopularMenu = () => {
-  /*
-  const [menu, setMenu] = useState([]);
-
-  useEffect(() => {
-    fetch("menu.json")
-      .then((res) => res.json())
-      .then((data) => {
-        const popularItems = data.filter(
-          (items) => items.category === "popular"
-        );
-
-        setMenu(popularItems);
-      });
-  }, []);
-  */
-
   const [menu] = useMenu();
   //console.log(menu);
 

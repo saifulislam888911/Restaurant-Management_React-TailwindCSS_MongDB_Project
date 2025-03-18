@@ -1,15 +1,13 @@
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-
 // import required modules
 import { Pagination } from "swiper/modules";
-
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
-
+// Files : Components : src :
 import SectionTitle from "../../../components/SectionTitle/SectionTitle";
-
+// Images : src : home :
 import slide1 from "../../../assets/home/slide1.jpg";
 import slide2 from "../../../assets/home/slide2.jpg";
 import slide3 from "../../../assets/home/slide3.jpg";

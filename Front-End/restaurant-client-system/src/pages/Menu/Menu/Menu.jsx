@@ -1,9 +1,13 @@
 import { Helmet } from "react-helmet-async";
-import Cover from "../../Shared/Cover/Cover";
-import useMenu from "../../../hooks/useMenu";
-import SectionTitle from "../../../components/SectionTitle/SectionTitle";
+// Files : Components : Menu :
 import MenuCategory from "../MenuCategory/MenuCategory";
-
+// Files : Components : src :
+import SectionTitle from "../../../components/SectionTitle/SectionTitle";
+// Files : Components : Shared :
+import Cover from "../../Shared/Cover/Cover";
+// Files : hooks :
+import useMenu from "../../../hooks/useMenu";
+// Images :
 import menuImg from "../../../assets/menu/banner3.jpg";
 import dessertImg from "../../../assets/menu/dessert-bg.jpeg";
 import pizzaImg from "../../../assets/menu/pizza-bg.jpg";
@@ -31,6 +35,7 @@ const Menu = () => {
         subHeading={"Don't miss"}
         heading={"TODAY'S OFFER"}
       ></SectionTitle>
+
       <MenuCategory items={offered}></MenuCategory>
 
       <MenuCategory

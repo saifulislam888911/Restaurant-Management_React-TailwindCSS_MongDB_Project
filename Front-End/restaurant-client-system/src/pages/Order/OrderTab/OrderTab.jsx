@@ -1,13 +1,11 @@
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
-
 // import required modules
 import { Pagination } from "swiper/modules";
-
+// Files : Components : src :
 import FoodCard from "../../../components/FoodCard/FoodCard";
 
 const OrderTab = ({ items }) => {

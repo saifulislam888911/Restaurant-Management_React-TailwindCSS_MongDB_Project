@@ -1,104 +1,54 @@
 import { useContext, useEffect, useState } from "react";
-// import { useRef } from "react";
 import {
   loadCaptchaEnginge,
   LoadCanvasTemplate,
   validateCaptcha,
 } from "react-simple-captcha";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-
-import { AuthContext } from "../../providers/AuthProvider";
 import { Helmet } from "react-helmet-async";
 import Swal from "sweetalert2";
+// Files : Contexts :
+import { AuthContext } from "../../providers/AuthProvider";
 
 const Login = () => {
   const [disabled, setDisabled] = useState(true);
-
-  // const captchaRef = useRef(null);
-
   const { signIn } = useContext(AuthContext);
 
   const navigate = useNavigate();
   const location = useLocation();
-
   const from = location.state?.from?.pathname || "/";
 
   useEffect(() => {
     loadCaptchaEnginge(6);
   }, []);
 
-  // NOTE:  handleLogin : This function will handle the login form submission. It will prevent the default form submission behavior, get the email and password values from the form, and log them to the console.
   const handleLogin = (event) => {
-    // NOTE:  event.preventDefault() : This function will prevent the default form submission behavior. It will stop the form from submitting and reloading the page.
     event.preventDefault();
 
-    // NOTE : event.target : The event.target property returns the element that triggered the event. The target property gets the element on which the event originally occurred, opposed to the currentTarget property, which always refers to the element whose event listener triggered the event.
     const form = event.target;
     const email = form.email.value;
     const password = form.password.value;
-    console.log(email, password);
+    // console.log(email, password);
 
     signIn(email, password).then((result) => {
-      // Signed in
       const user = result.user;
-      console.log("The user is : " + user);
+      // console.log("The user is : " + user);
 
       Swal.fire({
         title: "Login Successful",
-        // text: `${user}, Welcome to Bistro Restaurant`,
-
         position: "top-end",
         icon: "success",
         showConfirmButton: false,
         timer: 1500,
-
-        /*
-        showClass: {
-          popup: `
-            animate__animated
-            animate__fadeInUp
-            animate__faster
-          `,
-        },
-        hideClass: {
-          popup: `
-            animate__animated
-            animate__fadeOutDown
-            animate__faster
-          `,
-        },
-        */
       });
 
       navigate(from, { replace: true });
     });
   };
 
-  /*
-  const handleValidateCaptcha = () => {
-    const user_captcha_value = captchaRef.current.value;
-    console.log(user_captcha_value);
-
-    /*
-    if (validateCaptcha(user_captcha_value) == true) {
-      alert("Captcha Matched");
-    } else {
-      alert("Captcha Does Not Match");
-    }
-    */
-
-  /*
-    if (validateCaptcha(user_captcha_value)) {
-      setDisabled(false);
-    } else {
-      setDisabled(true);
-    }
-  };
-  */
-
   const handleValidateCaptcha = (event) => {
     const user_captcha_value = event.target.value;
-    console.log(user_captcha_value);
+    // console.log(user_captcha_value);
 
     if (validateCaptcha(user_captcha_value)) {
       setDisabled(false);
@@ -143,25 +93,6 @@ const Login = () => {
                   placeholder="Password"
                 />
 
-                {/* <label className="fieldset-label">
-                  <LoadCanvasTemplate />
-                </label>
-                <input
-                  type="text"
-                  name="captcha"
-                  ref={captchaRef}
-                  className="input"
-                  placeholder="Please enter the captcha"
-                />
-                <button
-                  type="button"
-                  onClick={handleValidateCaptcha}
-                  className="btn btn-outline btn-xs"
-                >
-                  Validate
-                </button> 
-                */}
-
                 <label className="fieldset-label">
                   <LoadCanvasTemplate />
                 </label>
@@ -172,6 +103,13 @@ const Login = () => {
                   className="input"
                   placeholder="Please enter the captcha"
                 />
+                <button
+                  type="button"
+                  // onClick={handleValidateCaptcha}
+                  className="btn btn-outline btn-xs"
+                >
+                  Validate
+                </button>
 
                 <div>
                   <a className="link link-hover">Forgot password?</a>

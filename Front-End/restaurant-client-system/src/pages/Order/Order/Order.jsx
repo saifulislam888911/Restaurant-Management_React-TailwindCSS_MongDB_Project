@@ -1,14 +1,15 @@
 import { useState } from "react";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
-
 import { useParams } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-
-import Cover from "../../Shared/Cover/Cover";
-import useMenu from "../../../hooks/useMenu";
+// Files : Components : Order :
 import OrderTab from "../OrderTab/OrderTab";
-
+// Files : Components : Shared :
+import Cover from "../../Shared/Cover/Cover";
+// Files : hooks :
+import useMenu from "../../../hooks/useMenu";
+// Images :
 import orderCoverImg from "../../../assets/shop/banner2.jpg";
 
 const Order = () => {
@@ -16,7 +17,6 @@ const Order = () => {
   const { category } = useParams();
   // console.log(category);
   const initialIndex = categories.indexOf(category);
-
   const [tabIndex, setTabIndex] = useState(initialIndex);
   const [menu] = useMenu();
 

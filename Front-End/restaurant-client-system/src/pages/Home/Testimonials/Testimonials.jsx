@@ -1,21 +1,15 @@
+import { useState, useEffect } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
-
 // import required modules
 import { Navigation } from "swiper/modules";
-
 // React Review Star
 import { Rating } from "@smastrom/react-rating";
-
 import "@smastrom/react-rating/style.css";
-
-// Necessary Files importing during Coding
-import { useState, useEffect } from "react";
-
+// Files : Components : src :
 import SectionTitle from "../../../components/SectionTitle/SectionTitle";
 
 const Testimonials = () => {

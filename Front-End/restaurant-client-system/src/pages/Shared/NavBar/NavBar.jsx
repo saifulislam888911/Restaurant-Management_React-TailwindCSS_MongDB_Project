@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
+// Files : Contexts
 import { AuthContext } from "../../../providers/AuthProvider";
 
 const NavBar = () => {
@@ -13,69 +14,8 @@ const NavBar = () => {
       });
   };
 
-  /*
-  const navOptions_1 = (
-    <>
-      <li>
-        <a>Item 1</a>
-      </li>
-
-      <li>
-        <a>Parent</a>
-
-        <ul className="p-2">
-          <li>
-            <a>Submenu 1</a>
-          </li>
-
-          <li>
-            <a>Submenu 2</a>
-          </li>
-        </ul>
-      </li>
-
-      <li>
-        <a>Item 3</a>
-      </li>
-    </>
-  );
-
-  const navOptions_2 = (
-    <>
-      <li>
-        <a>Item 1</a>
-      </li>
-
-      <li>
-        <details>
-          <summary>Parent</summary>
-
-          <ul className="p-2">
-            <li>
-              <a>Submenu 1</a>
-            </li>
-            <li>
-              <a>Submenu 2</a>
-            </li>
-          </ul>
-        </details>
-      </li>
-
-      <li>
-        <a>Item 3</a>
-      </li>
-    </>
-  );
-*/
-
   const navOptions = (
     <>
-      {/* 
-      <li>
-        <Link to="/">item</Link>
-      </li>
-      */}
-
       <li>
         <Link to="/">Home</Link>
       </li>
@@ -94,10 +34,6 @@ const NavBar = () => {
 
       {user ? (
         <>
-          {/* <button onClick={handleLogOut} className="btn btn-ghost">
-            Logout
-          </button> */}
-
           <li>
             <Link onClick={handleLogOut}>
               <span>{user?.displayName}</span>Logout
@@ -151,9 +87,9 @@ const NavBar = () => {
           <ul className="menu menu-horizontal px-1">{navOptions}</ul>
         </div>
 
-        {/* <div className="navbar-end">
-          <a className="btn">Button</a>
-        </div> */}
+        <div className="navbar-end">
+          <a className="btn">Get Started</a>
+        </div>
       </div>
     </>
   );

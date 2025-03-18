@@ -1,7 +1,8 @@
+// Files : Components : src :
 import SectionTitle from "../../../components/SectionTitle/SectionTitle";
-
+// CSS :
 import "./Featured.css";
-
+// Images :
 import featuredImg from "../../../assets/home/featured.jpg";
 
 const Featured = () => {

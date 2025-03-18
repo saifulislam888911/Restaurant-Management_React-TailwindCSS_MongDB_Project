@@ -1,3 +1,4 @@
+import { app } from "../firebase/firebase.config";
 import {
   createUserWithEmailAndPassword,
   getAuth,
@@ -7,9 +8,7 @@ import {
   updateProfile,
 } from "firebase/auth";
 import { createContext, useEffect, useState } from "react";
-
-import { app } from "../firebase/firebase.config";
-
+// Export :
 export const AuthContext = createContext(null);
 
 const auth = getAuth(app);
@@ -43,7 +42,6 @@ const AuthProvider = ({ children }) => {
     });
   };
 
-  // NOTE:  onAuthStateChanged : This function will trigger a callback function every time the user's sign-in state changes. It will return an unsubscribe function that you can call to stop listening to the user's sign-in state changes. This function is useful for getting the current user's sign-in state when the app loads. It is also useful for listening to the user's sign-in state changes in real-time. The callback function will receive the current user's User object if the user is signed in, or null if the user is signed out. The callback function will also receive an error object if there is an error.
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);
