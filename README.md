@@ -14,8 +14,4 @@ DevWithNotes : For Pushing working codes alongside with Comments & Notes. Always
 # Programming Hero Online Course : 
 Batch : 10 ;
 Milestone : 12 ; 
-Module : 64 , 65 , 66 , 67 ; 
-
-
-# Website : 
-Host / Live Link : .
+Module : 64 , 65 , 66 , 67 ;
