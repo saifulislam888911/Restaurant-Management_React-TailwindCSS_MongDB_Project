@@ -7,16 +7,14 @@ Version : React Router - 6.29.0 ; Tailwind CSS - 4.0.0 ; daisyUI - 5.0.0
 Helped From : Programming Hero Online-Class, Self-Practice, Self-Study. 
 
 
-# Branch : ("main")
-Main : Version Update (For releasing new updated version). 
-Development : For Updating new features. Always Upto Date. Clean Codes (Delete Comments & Notes). 
+# Branch : ("DevWithNotes-02")
 DevWithNotes : For Pushing working codes alongside with Comments & Notes. Always Upto Date. 
 
 
 # Programming Hero Online Course : 
 Batch : 10 ;
 Milestone : 12 ; 
-Module : 64 , 65 , 66 ; 
+Module : 64 , 65 , 66 , 67 ; 
 
 
 # Website : 
